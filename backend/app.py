@@ -1,32 +1,15 @@
-from flask import Flask
+from flask import Flask, session, request, jsonify, redirect, url_for
 from flask_cors import CORS
-from backend.models import db, JobApplication
-from backend.views import job_application_blueprint
-import os
-import datetime
-from flask import Flask, redirect, url_for, session, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
 from google.oauth2 import credentials
 from google_auth_oauthlib.flow import Flow
 from googleapiclient.discovery import build
-from google.auth.transport.requests import Request
-
-
-
-
 
 app = Flask(__name__)
 app.config.from_object('config.Config')
 CORS(app)
-
-db.init_app(app)
-app.register_blueprint(job_application_blueprint)
-
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///jobtracker.db'
-app.config['JWT_SECRET_KEY'] = 'your_jwt_secret_key'  # Use a secure key and store it safely
-app.secret_key = 'your_flask_secret_key'  # Use a secure key for session management
 
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
@@ -118,8 +101,8 @@ def add_event():
     if not user.google_credentials:
         return jsonify({'message': 'Google Calendar not authorized'}), 400
 
-    credentials = google.oauth2.credentials.Credentials(**user.google_credentials)
-    service = build('calendar', 'v3', credentials=credentials)
+    creds = credentials.Credentials(**user.google_credentials)
+    service = build('calendar', 'v3', credentials=creds)
 
     event_data = request.get_json()
     event = {
