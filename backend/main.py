@@ -12,6 +12,11 @@ from bs4 import BeautifulSoup
 # If modifying these SCOPES, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 
+
+
+
+
+
 def get_gmail_service():
     creds = None
     if os.path.exists('token.json'):
