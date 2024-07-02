@@ -16,7 +16,7 @@ body {
     height: 100%;
     margin-bottom: 10px;
   }
-  
+
  /* Nara messing around */
   /*Styling the input form*/
     /*Formblll*/
@@ -51,7 +51,6 @@ body {
       margin: 20px auto;
       padding: 10px 20px;
       font-size: 18px;
-      background-color: #025cd3fa;
       color: #150116;
       border: none ;
       border-radius: 5px;
@@ -60,6 +59,22 @@ body {
       touch-action: manipulation;
     }
     .artdeco-pill {
+      background-color: #025cd3fa;
+      transition-timing-function: cubic-bezier(.4,0,.2,1);
+      transition-duration: 167ms;
+      align-items: center;
+      border: none;
+      box-sizing: border-box;
+      font-weight: 600;
+      line-height: 1;
+      display: inline-flex;
+      font-family: inherit;
+      justify-content: center;
+      position: relative;
+      transition-property: background-color, box-shadow, color;
+    }
+    .artdeco-pill-clear {
+      background-color: rgb(226, 39, 25);
       transition-timing-function: cubic-bezier(.4,0,.2,1);
       transition-duration: 167ms;
       align-items: center;
@@ -76,8 +91,16 @@ body {
     .artdeco-pill:focus {
       outline-offset: 2px
     }
+    .artdeco-pill-clear:focus {
+      outline-offset: 2px
+    }
     .artdeco-pill:hover{
       background-color: aquamarine;
+      transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, 
+                                  it will go outside of the viewport) */
+    }
+    .artdeco-pill-clear:hover{
+      background-color: rgb(6, 97, 66);
       transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, 
                                   it will go outside of the viewport) */
     }
