@@ -5,15 +5,20 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <h1>Job Tracker</h1>
-  <form id="job-form">
-    <input type="text" id="job-title" placeholder="Job Title" required><br>
-    <input type="text" id="company" placeholder="Company" required><br>
-    <input type="url" id="job-url" placeholder="Job URL" required><br>
-    <textarea id="job-notes" placeholder="Notes"></textarea><br>
-    <button type="submit">Save Job</button>
-  </form>
-  <ul id="job-list"></ul>
+  <div class = "Snack-me">
+    <h1 class= "Fancy-kak">Job Tracker</h1>
+    <div class= "pop-up-bs">
+      <form id= "job-form">
+        <input type="text" id="job-title" placeholder="Job Title" required><br>
+        <input type="text" id="company" placeholder="Company" required><br>
+        <input type="url" id="job-url" placeholder="Job URL" required><br>
+        <textarea id="job-notes" placeholder="Notes"></textarea><br>
+        <button type="submit" aria-checked="true" role="radio" 
+        aria-label="All"  class= "artdeco-pill artdeco-pill__input" > Save Job </button>
+      </form>
+    </div>
+  </div>
+  <div><ul id="job-list"></ul></div>
   <script src="popup.js"></script>
 </body>
 </html>

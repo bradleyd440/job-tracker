@@ -1,14 +1,107 @@
 body {
-    font-family: Arial, sans-serif;
+    flex-flow: inherit;
+    font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
     width: 250px;
+    background-color: #525455;
+    margin: auto ;
+    justify-content: center;
   }
   
   input, textarea {
+    max-width: fit-content;
+    min-width: fit-content;
+    max-height: fit-content; /*Need to figure it out - regards to the text area*/
     width: 100%;
+    height: 100%;
     margin-bottom: 10px;
   }
   
-  button {
-    width: 100%;
-  }
+ /* Nara messing around */
+  /*Styling the input form*/
+    /*Formblll*/
+    /*.job-form{
+
+    }*/
+
+    /*Divs*/
+    div {
+      display: block;
+      unicode-bidi: isolate;
+    }
+    .Snack-me {
+      flex: auto;
+      text-align: center;
+      align-content: center, flex-start;
+    }
+    .pop-up-bs { 
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(51, 50, 50, 0.952);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgb(0, 0, 0);
+      text-align: center;
+    }
+    
+    /*Button style*/
+    button {
+      width: 100%;
+      display: -webkit-box ;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #025cd3fa;
+      color: #150116;
+      border: none ;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      touch-action: manipulation;
+    }
+    .artdeco-pill {
+      transition-timing-function: cubic-bezier(.4,0,.2,1);
+      transition-duration: 167ms;
+      align-items: center;
+      border: none;
+      box-sizing: border-box;
+      font-weight: 600;
+      line-height: 1;
+      display: inline-flex;
+      font-family: inherit;
+      justify-content: center;
+      position: relative;
+      transition-property: background-color, box-shadow, color;
+    }
+    .artdeco-pill:focus {
+      outline-offset: 2px
+    }
+    .artdeco-pill:hover{
+      background-color: aquamarine;
+      transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, 
+                                  it will go outside of the viewport) */
+    }
+    input.artdeco-pill__input {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      box-shadow: none;
+      box-sizing: border-box;
+      transition-property: background-color;
+    }
+
+    /* Style the list items */
+    ul li {
+      cursor: pointer;
+      position: relative;
+      padding: 12px 8px 12px 40px;
+      background: #eee;
+      font-size: 18px;
+      transition: 0.2s;
+
+  /* make the list items unselectable 
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;*/
+    }
