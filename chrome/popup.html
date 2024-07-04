@@ -8,10 +8,9 @@
 <body>
   
   <div class = "Snack-me">
-    <img src="https://img.freepik.com/premium-photo/three-cute-baby-cartoon-cats-sits-rock-field-illustration-ai-
-              generated-image_210643-9769.jpg" alt="Cats!" class="responsive">
-    <h1 class= "Fancy-kak">Job Tracker</h1>
+    <h1 class= "Fancy-kak"> Job Tracker </h1>
   </div>
+
   <div class="icon-bar">
     <a class="active" href="#"><i class="fa fa-home"></i></a>
     <a href="#"><i class="fa fa-search"></i></a>
@@ -21,17 +20,22 @@
   </div>
   <br> <!--Unorthadox gap between divs, need to find the correct way-->
   <div class= "pop-up-bs">
-    
+
       <form id= "job-form">
+        <label for job-title>Job Title</label>
         <input type="text" id="job-title" placeholder="Job Title" required><br>
+        <label for="company">Company</label>
         <input type="text" id="company" placeholder="Company" required><br>
+        <label for="jub-url">Job Url</label>
         <input type="url" id="job-url" placeholder="Job URL" required><br>
+        <label for="job-notes">Notes</label>
         <textarea type = "textarea" id="job-notes" placeholder="Notes"></textarea><br>
         <button type="submit" aria-checked="true" role="radio" 
         aria-label="All"  class= "artdeco-pill artdeco-pill__input" > Save Job </button>
         <button type="button" aria-checked="true" role="radio" 
         aria-label="All"  class= "artdeco-pill-clear artdeco-pill__input" > Clear </button>
       </form>
+
   </div>
   
   <div><ul id="job-list"></ul></div>
