@@ -66,6 +66,7 @@ body {
     .icon-bar {
       position: relative;
       align-items: center;
+      align-content: center;
       width: 100%; /* Full-width */
       background-color: #1b1b1b; /* Dark-grey background */
       overflow: auto; /* Overflow due to float */
